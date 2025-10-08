@@ -61,5 +61,9 @@ public class SelectionSort {
         }
     }
 
+    //todo: add optimized solution
+    // 1 - check for ifSorted
+    // 2 - implement bidirectional solution
+
 }
 
