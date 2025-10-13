@@ -19,10 +19,20 @@ public class MaximumAverageSubarrayNum643 {
     }
 
     // решение в стиле sliding window
-    // Временаня O(n)
+    // Временная O(n)
     public double optimizedFindMaxAverage(int[] nums, int k) {
-        double maxResult = -Double.MAX_VALUE;
-        return  maxResult;
+        //считаем сумму первого окна
+        int currentSum = 0;
+        for (int i = 0; i < k; i++) {
+            currentSum += nums[i];
+        }
+        int maxSum = currentSum;
+        //скользим
+        for (int j = k; j < nums.length; j++) {
+            currentSum = currentSum - nums[j - k] + nums[j];
+            maxSum = Math.max(maxSum, currentSum);
+        }
+        return (double) maxSum / k;
     }
 
 }
