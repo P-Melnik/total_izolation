@@ -31,6 +31,7 @@ class LongestCommonPrefixNum14Test {
 
         String[] input = {"cir","car"};
 
+
         String result = sut.longestCommonPrefix(input);
         assertEquals("c", result);
     }
