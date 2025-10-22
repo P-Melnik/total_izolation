@@ -30,12 +30,37 @@ package pmelnik.local.sorting;
 public class QuickSort {
 
     public void quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            //индекс опорного элемента
+            int pivotIndex = partition(array, low, high);
 
+            quickSort(array, low, pivotIndex - 1);
+            quickSort(array, pivotIndex + 1, high);
+        }
     }
 
     private int partition(int[] array, int low, int high) {
-        return 0;
+        //выбираем последний элемент как опорный
+        int pivot = array[high];
+        //индекс меньшего элемента (правильная позиция опорного элемента)
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            //если текущий элемент меньше или равен опорному
+            if (array[j] <= pivot) {
+                i++;
+                //меняем элементы местами
+                swap(array, i, j);
+            }
+        }
+        swap(array, i + 1, high);
+        return i + 1;
     }
 
+    private void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 
 }
