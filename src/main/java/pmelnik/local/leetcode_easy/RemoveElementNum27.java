@@ -20,4 +20,20 @@ public class RemoveElementNum27 {
         }
         return left;
     }
+
+    //более простое решение
+    //Время: O(n) - каждый элемент обрабатывается максимум один раз
+    //Память: O(1) - только константная дополнительная память
+    public int removeElementTwoPointers(int[] nums, int val) {
+        // указатель для записи элемнтов не равных val
+        int k = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[k] = nums[val];
+                k++;
+            }
+        }
+        return k;
+    }
 }
