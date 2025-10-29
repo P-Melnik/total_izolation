@@ -37,7 +37,7 @@ class ValidParenthesesNum20Test {
         String input = "(}{)";
 
         boolean res = sut.isValid(input);
-        assertTrue(res);
+        assertFalse(res);
     }
 
     @Test
@@ -45,7 +45,7 @@ class ValidParenthesesNum20Test {
         String input = "([][][})";
 
         boolean res = sut.isValid(input);
-        assertTrue(res);
+        assertFalse(res);
     }
 
 
