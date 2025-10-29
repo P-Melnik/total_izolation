@@ -28,16 +28,27 @@ class LinearSearchTest {
         assertEquals(-1, res);
     }
 
-//    //todo: add tests for multiple appearances search
-//    @Test
-//    void searchAllAppearances() {
-//        int[] input = {2, 5, 8, 12, 16, 23, 38, 45, 67, 89};
-//        int target = 23;
-//    }
-//
-//    @Test
-//    void searchAllAppearancesNotFound() {
-//        int[] input = {2, 5, 8, 12, 16, 23, 38, 45, 67, 89};
-//        int target = 13;
-//    }
+    @Test
+    void searchAllAppearances() {
+        int[] input = {2, 5, 23, 8, 12, 16, 23, 38, 23, 45, 67, 89};
+        int target = 23;
+
+        int[] appearances = sut.searchAllAppearances(input, target);
+
+        assertEquals(3, appearances.length);
+        assertEquals(2, appearances[0]);
+        assertEquals(6, appearances[1]);
+        assertEquals(8, appearances[2]);
+    }
+
+    @Test
+    void searchAllAppearancesNotFound() {
+        int[] input = {2, 5, 8, 12, 16, 23, 38, 45, 67, 89};
+        int target = 13;
+
+        int[] appearances = sut.searchAllAppearances(input, target);
+
+        assertEquals(0, appearances.length);
+    }
+
 }
