@@ -27,6 +27,6 @@ class FindTheIndexOfTheFirstOccurrenceInAStringNum28Test {
 
         int res = sut.strStr(haystack, needle);
 
-        assertEquals(1, res);
+        assertEquals(-1, res);
     }
 }
