@@ -27,4 +27,14 @@ public class ClimbingStairsNum70 {
 
         return current;
     }
+
+    // также присутсвует рекурсивное решение для Фибоначчи
+    // однако оно не является оптимальным
+    public int climbStairsRecursive(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return climbStairs(n - 1) + climbStairs(n - 2);
+    }
+
 }
