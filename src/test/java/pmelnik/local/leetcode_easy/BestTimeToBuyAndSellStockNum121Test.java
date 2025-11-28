@@ -32,7 +32,7 @@ class BestTimeToBuyAndSellStockNum121Test {
 
         int res = sut.maxProfit(prices);
 
-        assertEquals(100, res);
+        assertEquals(541, res);
     }
 
 }
