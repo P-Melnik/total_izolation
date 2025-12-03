@@ -27,4 +27,19 @@ public class MajorityElementNum169 {
 
         return -1;
     }
+
+    //Boyer-Moore Voting Algorithm (оптимальное)
+    public int majorityElementBVA(int[] nums) {
+        int count = 0;
+        Integer candidate = null;
+
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
+
 }

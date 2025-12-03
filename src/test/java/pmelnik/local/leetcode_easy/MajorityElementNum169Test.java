@@ -36,5 +36,32 @@ class MajorityElementNum169Test {
         assertEquals(13, res);
     }
 
+    @Test
+    void majorityElementBVA3() {
+        int[] input = {3, 2, 3};
+
+        int res = sut.majorityElementBVA(input);
+
+        assertEquals(3, res);
+    }
+
+    @Test
+    void majorityElementBVA2() {
+        int[] input = {2,2,1,1,1,2,2};
+
+        int res = sut.majorityElementBVA(input);
+
+        assertEquals(2, res);
+    }
+
+    @Test
+    void majorityElementBVA13() {
+        int[] input = {2,2,1,1,1, 13, 13, 13
+                ,2,2, 13, 13, 13, 99, 100, 99, 13, 13, 13, 13, 13, 13};
+
+        int res = sut.majorityElementBVA(input);
+
+        assertEquals(13, res);
+    }
 
 }
