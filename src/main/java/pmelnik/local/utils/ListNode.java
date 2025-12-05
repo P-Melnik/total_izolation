@@ -1,18 +1,21 @@
 package pmelnik.local.utils;
 
+import lombok.Getter;
+
+@Getter
 public class ListNode {
 
     int val;
 
     ListNode next;
 
-    ListNode() {}
+    public ListNode() {}
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode nextNode) {
+    public ListNode(int val, ListNode nextNode) {
         this.val = val;
         this.next = nextNode;
     }
