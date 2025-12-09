@@ -17,11 +17,11 @@ class AddTwoNumbersNum2Test {
         ListNode res = sut.addTwoNumbers(l1, l2);
 
         assertNotNull(res);
-        assertEquals(7, res.getVal());
-        assertNotNull(res.getNext());
-        assertEquals(0, res.getNext().getVal());
-        assertNotNull(res.getNext().getNext());
-        assertEquals(8, res.getNext().getNext().getVal());
-        assertNull(res.getNext().getNext().getNext());
+        assertEquals(7, res.val);
+        assertNotNull(res.next);
+        assertEquals(0, res.next.val);
+        assertNotNull(res.next.next);
+        assertEquals(8, res.next.next.val);
+        assertNull(res.next.next.next);
     }
 }
