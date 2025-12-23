@@ -14,10 +14,16 @@ class PascalsTriangleNum118Test {
     void generate() {
         int input = 5;
 
-        List<List<Integer>> result = List.of(
+        List<List<Integer>> expected = List.of(
                 List.of(1),
-                List.of(1, 1)
-                //todo: finish this test data
+                List.of(1, 1),
+                List.of(1, 2, 1),
+                List.of(1, 3, 3, 1),
+                List.of(1, 4, 6, 4, 1)
         );
+
+        var actual = sut.generate(input);
+
+        assertEquals(expected, actual);
     }
 }
