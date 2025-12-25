@@ -23,10 +23,24 @@ public class PascalsTriangleNum118 {
             return triangle;
         }
 
+        //генерируем остальные строки
         for (int row = 1; row < numRows; row++) {
+            List<Integer> previousRow = triangle.get(row - 1);
+            List<Integer> currentRow = new ArrayList<>();
+            //первый элемент всегда 1
+            currentRow.add(1);
 
+            for (int i = 1; i < row; i++) {
+                int sum = previousRow.get(i - 1) + previousRow.get(i);
+                currentRow.add(sum);
+            }
+
+            //последний элемент всегда 1
+            currentRow.add(1);
+
+            triangle.add(currentRow);
         }
 
-        return new ArrayList<>();
+        return triangle;
     }
 }
