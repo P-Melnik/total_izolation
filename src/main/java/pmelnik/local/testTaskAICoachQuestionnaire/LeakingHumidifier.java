@@ -4,6 +4,10 @@ public class LeakingHumidifier {
 
     public String calculateAmountOfWaterAfterAddingWater(String input) {
 
+        if (input == null || input.isEmpty()) {
+            return "0";
+        }
+
         String[] lines = input.trim().split("\n");
         int n = Integer.parseInt(lines[0].trim());
 
