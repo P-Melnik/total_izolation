@@ -19,9 +19,9 @@ class LeakingHumidifierTest {
             7 1
             """;
 
-        int res = sut.calculateAmountOfWaterAfterAddingWater(input);
+        String res = sut.calculateAmountOfWaterAfterAddingWater(input);
 
-        Assertions.assertEquals(3, res);
+        Assertions.assertEquals("3", res);
     }
 
     @Test
@@ -33,9 +33,9 @@ class LeakingHumidifierTest {
             21 5
             """;
 
-        int res = sut.calculateAmountOfWaterAfterAddingWater(input);
+        String res = sut.calculateAmountOfWaterAfterAddingWater(input);
 
-        Assertions.assertEquals(5, res);
+        Assertions.assertEquals("5", res);
     }
 
     @Test
@@ -54,8 +54,8 @@ class LeakingHumidifierTest {
             97 7
             """;
 
-        int res = sut.calculateAmountOfWaterAfterAddingWater(input);
+        String res = sut.calculateAmountOfWaterAfterAddingWater(input);
 
-        Assertions.assertEquals(57, res);
+        Assertions.assertEquals("57", res);
     }
 }
