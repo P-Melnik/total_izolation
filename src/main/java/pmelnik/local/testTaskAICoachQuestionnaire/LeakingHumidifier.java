@@ -2,6 +2,28 @@ package pmelnik.local.testTaskAICoachQuestionnaire;
 
 public class LeakingHumidifier {
 
+    /**
+     * Анализ сложности
+     * Временная O(n)
+     * Пространственная O(L) где L - длина входной строки
+     * Работа алгоритма:
+     * 1. Инициализация:
+     *    water = 0    (начальный уровень воды)
+     *    prevTime = 0 (время последнего долива)
+     * 2. Для каждого долива i от 1 до N:
+     *    а) Получаем время T_i и объем V_i
+     *    б) Вычисляем прошедшее время:
+     *       elapsed = T_i - prevTime
+     *    в) Учитываем утечку за это время:
+     *       water = max(0, water - elapsed)
+     *       // Вода не может стать отрицательной
+     *    г) Добавляем новый объем:
+     *       water += V_i
+     *    д) Обновляем время последнего долива:
+     *       prevTime = T_i
+     * 3. Возвращаем water (уровень после последнего долива)
+     */
+
     public String calculateAmountOfWaterAfterAddingWater(String input) {
 
         if (input == null || input.isEmpty()) {
