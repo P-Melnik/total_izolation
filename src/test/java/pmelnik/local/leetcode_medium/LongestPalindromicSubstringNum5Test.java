@@ -12,7 +12,7 @@ class LongestPalindromicSubstringNum5Test {
     @Test
     void longestPalindromicSubstring() {
         String input = "babad";
-        String expectedResult = "bab";
+        String expectedResult = "aba";
 
         String result = sut.longestPalindromicSubstring(input);
 
