@@ -15,9 +15,20 @@ public class LongestPalindromicSubstringNum5 {
 
     public String longestPalindromicSubstring(String s) {
 
-        for (int i = 0, j = s.length() - 1; i < s.length()/2; i++, j--) {
-
+        if (s == null || s.length() == 0) {
+            return "";
         }
+
         return "";
+    }
+
+    private int expandAroundCenter(String s, int left, int right) {
+        // Расширяем в обе стороны, пока символы совпадают
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+
+        return right - left -1;
     }
 }
