@@ -13,7 +13,7 @@ class ReverseIntegerNum7Test {
         var input = 123;
         int res = sut.reverse(input);
 
-        assertEquals(312, res);
+        assertEquals(321, res);
     }
 
     @Test
@@ -29,7 +29,7 @@ class ReverseIntegerNum7Test {
         var input = 120;
         int res = sut.reverse(input);
 
-        assertEquals(12, res);
+        assertEquals(21, res);
     }
 
 }
