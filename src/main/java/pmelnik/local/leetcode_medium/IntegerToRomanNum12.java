@@ -13,9 +13,20 @@ package pmelnik.local.leetcode_medium;
 public class IntegerToRomanNum12 {
 
     public String intToRoman(int num) {
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
+        StringBuilder result = new StringBuilder();
 
-        return "";
+        for (int i = 0; i < values.length; i++) {
+            // Пока текущее значение можно вычесть из num
+            while (num >= values[i]) {
+                num -= values[i];       // Вычитаем значение
+                result.append(symbols[i]); // Добавляем символ
+            }
+        }
+
+        return result.toString();
     }
 
 }
